@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= title %> in EJS</h1>
+    <div>
+        sign in
+        <form name="signIpForm" action="/auth/signIn" method="post">
+            Username: <input name="userName" id="userName">
+            Password: <input name="password" id="password">
+            <input type="submit" value="Sign in">
+        </form>
+    </div>
+    <div> sign up
+        <form name="signUpForm" action="/auth/signUp" method="post">
+            Username: <input name="userName" id="userName">
+            Password: <input name="password" id="password">
+            <input type="submit" value="Sign up">
+        </form>
+    </div>
+    <ul>
+        <% for(var i=0; i<nav.length; i++) { %>
+            <li><a href=<%= nav[i].link %> ><%= nav[i].text %></a></li>
+        <% } %>
+    </ul>
+</body>
+</html>
